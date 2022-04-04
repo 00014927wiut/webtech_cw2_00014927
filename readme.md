@@ -30,6 +30,6 @@ dependency list
 "mongodb": "^4.4.1",
 "mongoose": "^6.2.8"
 
-github link: 
+github link: https://github.com/00014927wiut/webtech_cw2_00014927
 
-heroku domain:
+heroku domain:https://interviews-pro.herokuapp.com/
