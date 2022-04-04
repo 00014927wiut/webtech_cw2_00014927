@@ -1,0 +1,57 @@
+<%- include('../includes/header.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navbar.ejs') %>
+            <main class="main-section mt-4">
+                <h5 class="mb-3"><span class="text-muted">Applicant: </span>
+                    <%= interviews[0].userId.firstName %>
+                        <%= interviews[0].userId.lastName %>
+                </h5>
+                <h5 class="mb-3"><span class="text-muted">Student at: </span>
+                    <%= interviews[0].university %>
+                </h5>
+                <h6 class="mb-3"><span class="text-muted">Recommendations:</span>
+                    <%= interviews[0].recommendation %>
+                </h6>
+                <div class="card mb-2">
+                    <div class="card-header">
+                        first question
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= interviews[0].question1%> ?
+                        </h5>
+                        <p class="card-text">
+                            <%= interviews[0].answer1%>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-header">
+                        second question
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= interviews[0].question2%> ?
+                        </h5>
+                        <p class="card-text">
+                            <%= interviews[0].answer2 %>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-header">
+                        third question
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= interviews[0].question3 %> ?
+                        </h5>
+                        <p class="card-text">
+                            <%= interviews[0].answer3%>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <%- include('../includes/end.ejs') %>

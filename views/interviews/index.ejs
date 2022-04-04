@@ -1,0 +1,38 @@
+<%- include('../includes/header.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navbar.ejs') %>
+
+            <section class="main-section mt-5">
+                <div class="row">
+                    <% if (interviewList.length > 0) { %>
+                        <% for (let interview of interviewList) { %>
+                            <div class="col-sm-4 mb-2">
+                                <div class="card">
+                                    <% if (interview.status) { %>
+                                        <img class="card-img-top" alt="status visa" src="https://en.usvisaservice.de/assets/Uploads/US-visa-application-requirements__FillWzYwMCw0MDBd.jpg">
+                                        <% } else { %>
+                                            <img class="card-img-top" alt="status visa" src="https://www.theeastafrican.co.ke/resource/blob/1376984/35bedc474b6e03dbe9281829533a6fd2/visa-data.jpg">
+                                            <% } %>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Student of
+                                                        <%= interview.university %>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        <%= interview.userId.firstName %>
+                                                            <%= interview.userId.lastName %> -
+                                                                <%= interview.course %> year student </p>
+                                                    <a href="/interview/<%= interview._id %>" class="btn btn-primary">View Post</a>
+                                                </div>
+                                </div>
+                            </div>
+
+                            <% } %>
+                                <% } else { %>
+                                    <h1>No Posts Found!</h1>
+                                    <% } %>
+                </div>
+            </section>
+
+            <%- include('../includes/end.ejs') %>
